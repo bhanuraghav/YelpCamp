@@ -44,7 +44,7 @@ router.post("/",middleware.isLoggedIn,function(req,res){
 		description: description,
 		author: author
 	};
-	Campground.create(newCamp ,middleware.isLoggedIn, function(err,newlyCamp){
+	Campground.create(newCamp , function(err,newlyCamp){
 		if(err){
 			console.log(err);
 		}
