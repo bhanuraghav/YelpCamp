@@ -9,7 +9,8 @@ var express = require("express"),
 	Campground = require("./models/campgrounds"),
 	Comment = require("./models/comment"),
 	User = require("./models/user"),
-	seedDB      = require("./seeds");
+	seedDB      = require("./seeds"),
+	port = process.env.PORT || 3000;
 
 //requiring routes
 var campgroundRoutes = require("./routes/campgrounds"),
@@ -74,6 +75,6 @@ app.use("/campgrounds",campgroundRoutes);
 
 
 
-app.listen(3000,function(){
+app.listen(port,function(){
 	console.log("Server Running");
 })
